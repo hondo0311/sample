@@ -40,7 +40,10 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-
+$app->singleton(
+    'Illuminate\Contracts\Debug\ExceptionHandler',
+    'Gvb\Whoops\ExceptionHandler'
+);
 /*
 |--------------------------------------------------------------------------
 | Return The Application
